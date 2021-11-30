@@ -36,10 +36,54 @@
         /* STARTER */
         font-family: sans-serif;
         background-color: #ddd;
-        font-size: 40px;
+        font-size: 30px;
         margin: 40px;
 
         /* FLEXBOX */
+        display: flex;
+        /* wyśrodkowanie w poziomie */
+        align-items: center;
+        /* wyśrodkowanie w pionie */
+        justify-content: flex-start;
+        gap: 10px;
+      }
+
+      .el {
+        /* 
+        DEFAULTS:
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto; */
+
+        /* podstawowa szerokość, jeśli za mało miejsca to zmniejszy*/
+        /* flex-basis: 100px; */
+        /* 1 - zmniejsza szerokość do kontenera, 0 - nie zmniejsza */
+        flex-shrink: 0;
+        /* czy element może rosnąć do kontenera, można się bawić proporcjami wolnej przestrzeni */
+        flex-grow: 1;
+        /* skrót flex-grow flex-shrink flex-basis */
+        /* flex: 1 0 100px; */
+      }
+
+      .el--1 {
+        align-self: flex-start;
+      }
+      .el--2 {
+      }
+      .el--3 {
+      }
+      .el--4 {
+        align-self: stretch;
+        /* order: 1; */
+      }
+      .el--5 {
+      }
+      .el--6 {
+        order: -1;
+      }
+      .el--7 {
+      }
+      .el--8 {
       }
     </style>
   </head>
