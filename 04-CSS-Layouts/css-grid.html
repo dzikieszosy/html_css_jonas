@@ -36,23 +36,76 @@
         /* STARTER */
         font-family: sans-serif;
         background-color: #ddd;
-        font-size: 40px;
+        font-size: 30px;
         margin: 40px;
 
         /* CSS GRID */
+        display: grid;
+        /* grid-template-columns: 2fr 2fr 1fr auto; */
+        /* grid-template-rows: 300px 200px; */
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        /* height: 600px; */
+        /* gap: 30px; */
+        column-gap: 20px;
+        row-gap: 40px;
+        /* justify-items: center; */
+        /* align-items: center; */
+        /* justify-content: center; */
+        /* align-content: center; */
+        display: none;
+      }
+
+      .el--8 {
+        grid-column: 2 / 3;
+        grid-row: 1 / 4;
+      }
+
+      .el--2 {
+        /* grid-column: 1 / 2; */
+
+        /* grid-column: 1 / 4; */
+        /* to samo co 1 / 4 */
+        /* grid-column: 1 / span 3; */
+
+        /* grid-column: 1 / span 4; */
+        /* to samo co 1 / span 4 */
+        grid-column: 1 / -1;
+
+        grid-row: 2 / 3;
       }
 
       .container--2 {
+        /* display: none; */
         /* STARTER */
         font-family: sans-serif;
         background-color: black;
         font-size: 40px;
-        margin: 100px;
+        margin: 40px;
 
-        width: 1000px;
+        width: 700px;
         height: 600px;
 
         /* CSS GRID */
+        display: grid;
+        grid-template-columns: 125px 200px 125px;
+        grid-template-rows: 250px 100px;
+        gap: 50px;
+
+        /* wyrównanie wewnątrz kontenera, dysponując wolną przestrzenią  */
+        justify-content: center;
+        /* justify-content: space-between; */
+        align-content: center;
+
+        /* wyrównanie zawartości wewnątrz komórek - nie zawartości - widać na chrome dobrze*/
+        align-items: center;
+        justify-items: center;
+      }
+
+      .el--3 {
+        /* nadpisze wartości z kontenera do jednej komórki */
+        align-self: end;
+        justify-self: end;
       }
     </style>
   </head>
